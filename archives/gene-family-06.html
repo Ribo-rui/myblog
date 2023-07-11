@@ -7,16 +7,32 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ribo">
-<meta property="og:url" content="https://ribo-home.top/categories/%E9%9A%8F%E7%AC%94/index.html">
+<meta name="description" content="TBtools实现多物种间共线性通过EnsemblPlants获得四个物种的全基因组序列及注释文件 01 ID Simplify将全基因组序列名称简化（个人习惯）  02 ID Prefix &amp; GXF ID Prefix将简化名称的全基因组序列和注释文件进行排序   03 One Step MCScanX - Super Fast 选取结果文件中的ChrLayout、gff、geneLi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="06-多物种间共线性">
+<meta property="og:url" content="https://ribo-home.top/archives/gene-family-06.html">
 <meta property="og:site_name" content="Ribo">
+<meta property="og:description" content="TBtools实现多物种间共线性通过EnsemblPlants获得四个物种的全基因组序列及注释文件 01 ID Simplify将全基因组序列名称简化（个人习惯）  02 ID Prefix &amp; GXF ID Prefix将简化名称的全基因组序列和注释文件进行排序   03 One Step MCScanX - Super Fast 选取结果文件中的ChrLayout、gff、geneLi">
 <meta property="og:locale">
+<meta property="og:image" content="https://ribo-home.top/img/404.jpg">
+<meta property="og:image" content="https://ribo-home.top/img/404.jpg">
+<meta property="og:image" content="https://ribo-home.top/img/404.jpg">
+<meta property="og:image" content="https://ribo-home.top/img/404.jpg">
+<meta property="og:image" content="https://ribo-home.top/img/404.jpg">
+<meta property="og:image" content="https://ribo-home.top/img/404.jpg">
+<meta property="og:image" content="https://ribo-home.top/img/404.jpg">
+<meta property="og:image" content="https://ribo-home.top/img/404.jpg">
+<meta property="og:image" content="https://ribo-home.top/img/404.jpg">
+<meta property="og:image" content="https://ribo-home.top/img/404.jpg">
+<meta property="article:published_time" content="2023-07-11T13:52:44.000Z">
+<meta property="article:modified_time" content="2023-07-11T06:37:38.553Z">
 <meta property="article:author" content="Ribo">
+<meta property="article:tag" content="基因家族分析">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ribo-home.top/img/404.jpg">
 
 
-<title >Ribo</title>
+<title >06-多物种间共线性</title>
 
 <!-- Favicon -->
 
@@ -62,7 +78,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"ribo-home.top","author":"Ribo","root":"/","typed_text":["Ribo's Blog","Ribo's Research","Ribo's Life"],"theme_version":"2.0.2","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/img/logo.png","icon16":"/img/logo.png","icon32":"/img/logo.png","appleTouchIcon":"/img/logo.png","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"/img/logo.png","showText":"欢迎回来！","hideText":"(●—●)快回来啦！"},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"mac","height_limit":500},"creative_commons":{"license":"by-nc-sa","language":"deed.zh"},"notice_outdate":{"enable":true,"style":"flat","limit_day":365,"position":"top"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":false,"isHome":false,"postUpdate":"2023-07-11 14:42:00"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2023-07-11 14:37:38"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.0.2" id="trm-switch-style">
@@ -230,12 +246,13 @@
             <!-- top bar end -->
 
             <!-- body -->
-            <div class="trm-content-start">
+            
+<div class="trm-content-start">
     <!-- banner -->
     <div class="trm-banner" data-scroll data-scroll-direction="vertical">
     
     <!-- banner cover -->
-    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3" src="https://cdn.staticaly.com/gh/yzyyz1387/blogimages/master/avatar/rui_bg.jpg">
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3" src="https://cdn.ribo-home.top/Obsidian/Banner-synteny.png">
     <!-- banner cover end -->
     
 
@@ -251,10 +268,10 @@
                     <!-- banner title -->
                     <div class="trm-banner-text ">
                         <div class="trm-label trm-mb-20">
-                            The article archive
+                            NEWS LETTER
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            云间连下榻，<br>天上接行杯。
+                            06-多物种间共线性
                         </h1>
 
                         
@@ -264,7 +281,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        categories
+                                        archives
                                     </span
                                 ></li>
                             </ul>
@@ -296,7 +313,17 @@
 <div class="trm-main-card-frame trm-sidebar">
     <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="60"> 
     
-        <!-- card header -->
+        <div class="trm-user-tabs" id="sidebar-tabs">
+           <div class="trm-tabs-nav trm-mb-40" id="trm-tabs-nav">
+                <div data-to="tabs-user" class="trm-tabs-nav-item">
+                    <i class="iconfont fas fa-user-alt"></i>
+                </div>
+                <div data-to="tabs-toc" class="trm-tabs-nav-item active">
+                    <i class="iconfont fas fa-th-list"></i>
+                </div>
+           </div>
+            <div name="tabs-user" class="trm-tabs-item">
+                <!-- card header -->
 <div class="trm-mc-header">
     <div class="trm-avatar-frame trm-mb-20">
         <img alt="Avatar" class="trm-avatar" src="https://cdn.ribo-home.top/Obsidian/Portrait.jpg">
@@ -314,7 +341,7 @@
     
 </div>
 <!-- card header end -->
-        <!-- sidebar social -->
+                <!-- sidebar social -->
 
 <div class="trm-divider trm-mb-40 trm-mt-40"></div>
 <div class="trm-social">
@@ -330,7 +357,7 @@
 </div>
 
 <!-- sidebar social end -->
-        <!-- info -->
+                <!-- info -->
 <div class="trm-divider trm-mb-40 trm-mt-40"></div>
 <ul class="trm-table trm-mb-20">
     
@@ -355,7 +382,7 @@
 </ul>
 <!-- info end -->
 
-        
+                
     <div class="trm-divider trm-mb-40 trm-mt-40"></div>
     <!-- action button -->
     <div class="text-center">
@@ -366,6 +393,13 @@
     </div>
     <!-- action button end -->
 
+            </div>
+            <div name="tabs-toc" class="trm-tabs-item active">
+                <div class="post-toc">
+    <ol class="toc"><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#TBtools实现多物种间共线性"  data-scroll-to="#TBtools实现多物种间共线性"><span class="toc-number">1.</span> <span class="toc-text">TBtools实现多物种间共线性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#01-ID-Simplify"  data-scroll-to="#01-ID-Simplify"><span class="toc-number">1.1.</span> <span class="toc-text">01 ID Simplify</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#02-ID-Prefix-amp-GXF-ID-Prefix"  data-scroll-to="#02-ID-Prefix-amp-GXF-ID-Prefix"><span class="toc-number">1.2.</span> <span class="toc-text">02 ID Prefix &amp; GXF ID Prefix</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#03-One-Step-MCScanX-Super-Fast"  data-scroll-to="#03-One-Step-MCScanX-Super-Fast"><span class="toc-number">1.3.</span> <span class="toc-text">03 One Step MCScanX - Super Fast</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#04-Text-Merge-for-MCScanX"  data-scroll-to="#04-Text-Merge-for-MCScanX"><span class="toc-number">1.4.</span> <span class="toc-text">04 Text Merge for MCScanX</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#05-Multiple-Synteny-Plot"  data-scroll-to="#05-Multiple-Synteny-Plot"><span class="toc-number">1.5.</span> <span class="toc-text">05 Multiple Synteny Plot</span></a></li></ol></li></ol>
+</div>
+            </div>
+        </div>
     
     </div>
 </div>
@@ -376,79 +410,100 @@
                 <div class="trm-content" id="trm-content">
                     <div data-scroll data-scroll-repeat data-scroll-offset="500" id="about-triger"></div>
 
-                    <div class="row">
-    <div class="col-lg-12">
-        <div class="trm-card">
-            <div style="padding: 0 20px;">
-                
-                    <ul class="row trm-list"><li class="col-lg-4 trm-list-item " style="margin: 6px 0;"><a class="category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E8%AE%BE%E7%BD%AE/">个人网站设置</a><span class="category-list-count">（2）</span></li><li class="col-lg-4 trm-list-item " style="margin: 6px 0;"><a class="category-list-link" href="/categories/%E5%95%A5%E9%83%BD%E8%AF%95%E8%AF%95/">啥都试试</a><span class="category-list-count">（1）</span></li><li class="col-lg-4 trm-list-item " style="margin: 6px 0;"><a class="category-list-link" href="/categories/%E7%A7%91%E7%A0%94/">科研</a><span class="category-list-count">（3）</span></li><li class="col-lg-4 trm-list-item " style="margin: 6px 0;"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a><span class="category-list-count">（2）</span></li></ul>
-                
-            </div>
+                    <div id="post-info" class="row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            07/11
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            21:52
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            Ribo
         </div>
     </div>
 </div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <h2 id="TBtools实现多物种间共线性"><a href="#TBtools实现多物种间共线性" class="headerlink" title="TBtools实现多物种间共线性"></a>TBtools实现多物种间共线性</h2><p>通过<a target="_blank" rel="noopener" href="http://plants.ensembl.org/">EnsemblPlants</a>获得四个物种的全基因组序列及注释文件</p>
+<h3 id="01-ID-Simplify"><a href="#01-ID-Simplify" class="headerlink" title="01 ID Simplify"></a>01 ID Simplify</h3><p>将全基因组序列名称简化（个人习惯）</p>
+<p><img src="https://cdn.ribo-home.top/Obsidian/Genefamily-06-1.png" alt="1.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="02-ID-Prefix-amp-GXF-ID-Prefix"><a href="#02-ID-Prefix-amp-GXF-ID-Prefix" class="headerlink" title="02 ID Prefix &amp; GXF ID Prefix"></a>02 ID Prefix &amp; GXF ID Prefix</h3><p>将简化名称的全基因组序列和注释文件进行排序</p>
+<p><img src="https://cdn.ribo-home.top/Obsidian/Genefamily-06-2.png" alt="2.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><img src="https://cdn.ribo-home.top/Obsidian/Genefamily-06-3.png" alt="3.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="03-One-Step-MCScanX-Super-Fast"><a href="#03-One-Step-MCScanX-Super-Fast" class="headerlink" title="03 One Step MCScanX - Super Fast"></a>03 One Step MCScanX - Super Fast</h3><p><img src="https://cdn.ribo-home.top/Obsidian/Genefamily-06-4.png" alt="4.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>选取结果文件中的<code>ChrLayout、gff、geneLink</code>三个文件</p>
+<p><img src="https://cdn.ribo-home.top/Obsidian/Genefamily-06-5.png" alt="5.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="04-Text-Merge-for-MCScanX"><a href="#04-Text-Merge-for-MCScanX" class="headerlink" title="04 Text Merge for MCScanX"></a>04 Text Merge for MCScanX</h3><p>将结果文件合并并修改显示的物种名称、染色体颜色和顺序等</p>
+<p><img src="https://cdn.ribo-home.top/Obsidian/Genefamily-06-6.png" alt="6.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><img src="https://cdn.ribo-home.top/Obsidian/Genefamily-06-7.png" alt="image.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h3 id="05-Multiple-Synteny-Plot"><a href="#05-Multiple-Synteny-Plot" class="headerlink" title="05 Multiple Synteny Plot"></a>05 Multiple Synteny Plot</h3><p>将合并好的三个文件对应放入其中，同时放入鉴定出的基因家族，注意这里的基因名需要和其他三个文件中的格式一致</p>
+<p><img src="https://cdn.ribo-home.top/Obsidian/Genefamily-06-8.png" alt="image.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>置入文件时若发现有奇奇怪怪的东西记得在对应的txt文档中去除</p>
+<p><img src="https://cdn.ribo-home.top/Obsidian/Genefamily-06-9.png" alt="image.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>图像出来后在根据需要在<code>ChrLayout</code>文件中进行调整排序等，最后保存</p>
+<p><img src="https://cdn.ribo-home.top/Obsidian/Genefamily-06-10.png" alt="image.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 
-<!-- history -->
+</article>
+    
+    
 
-<div class="row">
+<ul class="trm-post-copyright">
+    <li class="trm-post-copyright-author">
+        <strong>本文作者：</strong>
+        Ribo
+    </li>
+    <li class="trm-post-copyright-link">
+        <strong>本文链接：</strong>
+        <a id="original-link" href="https://ribo-home.top/archives/gene-family-06.html" title="06-多物种间共线性">https://ribo-home.top/archives/gene-family-06.html</a>
+    </li>
+    <li class="trm-post-copyright-license">
+        <strong>版权声明：</strong>
+        本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 ">CC BY-NC-SA 4.0</a> 许可协议。
+    </li>
+</ul>
+
+</div>
+<div id="post-next-prev" class="row">
     <div class="col-lg-12">
         <!-- title -->
         <h5 class="trm-title-with-divider">
-            
-                随笔
-            
-            <span data-number="01"></span>
+            其他文章
+            <span data-number="02"></span>
         </h5>
     </div>
-    <div class="col-lg-12">
-        <!-- timeline -->
-        <div class="trm-timeline">
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-older-publications-card trm-scroll-animation trm-active-el" data-scroll="" data-scroll-offset="40">
+        <div class="trm-older-publication">
             
-            <div class="trm-timeline-item trm-scroll-animation" data-scroll data-scroll-offset="40">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content less">
-                    
-                        <div class="trm-card-header">
-                            <h6>
-                                <a href="/archives/morning.html" class="trm-anima-link">
-                                    你有多久没有听到早安了
-                                </a>
-                            </h6>
-                        </div>
-                    
-                </div>
-            </div>
-            
-            <div class="trm-timeline-item trm-scroll-animation" data-scroll data-scroll-offset="40">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content less">
-                    
-                        <div class="trm-card-header">
-                            <h6>
-                                <a href="/archives/wheat-field-thoughts.html" class="trm-anima-link">
-                                    我行其野 芃芃其麦
-                                </a>
-                            </h6>
-                        </div>
-                    
-                </div>
-            </div>
-            
+            <a class="trm-op-top trm-anima-link" href="/archives/make-a-game.html">
+                <span class="trm-op-cover">
+                    <img alt="cover" class="no-fancybox" src="https://cdn.ribo-home.top/Obsidian/Cover-Unity.jpg">
+                </span>
+                <h6 class="trm-op-title">人生制作的第一款游戏</h6>
+            </a>
+            <div class="trm-divider trm-mb-15 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>23/07/11</li>
+                <li>21:52</li>
+                <li>啥都试试</li>
+            </ul>
         </div>
-        <!-- timeline end -->
     </div>
 </div>
+    
+</div>
 
-<!-- history end -->
-
-
-    <div class="trm-pagination">
-        <span class="page-number current">1</span>
-    </div>
-
-
+    
 
 
 
@@ -521,6 +576,10 @@
 
             <div class="trm-fixed-container" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
     
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
+    
     
         <div class="trm-fixed-btn" data-title="单栏和双栏切换" onclick="asyncFun.switchSingleColumn()">
             <i class="iconfont fas fa-arrows-alt-h"></i>
@@ -563,6 +622,10 @@
     
 
     <!-- 评论插件 -->
+    
+        
+
+        
     
 
 
