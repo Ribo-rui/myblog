@@ -7,16 +7,30 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ribo">
-<meta property="og:url" content="https://ribo-home.top/archives/2023/02/index.html">
+<meta name="description" content="使用TBtools从基因组中提取基因序列数据准备一份基因组数据，例如TM-1.fa 一份对应的注释数据，例如TM-1.gff 一份目标基因ID，例如ID-6.txt 注：三者的ID一定要对应哈  操作步骤打开TBtoolsGXF Selector工具从全基因组注释信息中提取与目标基因的相关的注释信息，得到.gff文件 注：output区域一定要根据文件类型进行具体命名  手动整理信息用excel分">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用TBtools从基因组中提取基因序列">
+<meta property="og:url" content="https://ribo-home.top/archives/genome-extract.html">
 <meta property="og:site_name" content="Ribo">
+<meta property="og:description" content="使用TBtools从基因组中提取基因序列数据准备一份基因组数据，例如TM-1.fa 一份对应的注释数据，例如TM-1.gff 一份目标基因ID，例如ID-6.txt 注：三者的ID一定要对应哈  操作步骤打开TBtoolsGXF Selector工具从全基因组注释信息中提取与目标基因的相关的注释信息，得到.gff文件 注：output区域一定要根据文件类型进行具体命名  手动整理信息用excel分">
 <meta property="og:locale">
+<meta property="og:image" content="https://ribo-home.top/img/404.jpg">
+<meta property="og:image" content="https://ribo-home.top/img/404.jpg">
+<meta property="og:image" content="https://ribo-home.top/img/404.jpg">
+<meta property="og:image" content="https://ribo-home.top/img/404.jpg">
+<meta property="og:image" content="https://ribo-home.top/img/404.jpg">
+<meta property="og:image" content="https://ribo-home.top/img/404.jpg">
+<meta property="og:image" content="https://ribo-home.top/img/404.jpg">
+<meta property="og:image" content="https://ribo-home.top/img/404.jpg">
+<meta property="article:published_time" content="2024-01-23T05:14:52.000Z">
+<meta property="article:modified_time" content="2024-01-23T15:35:10.416Z">
 <meta property="article:author" content="Ribo">
+<meta property="article:tag" content="TBtools小技巧">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://ribo-home.top/img/404.jpg">
 
 
-<title >Ribo</title>
+<title >使用TBtools从基因组中提取基因序列</title>
 
 <!-- Favicon -->
 
@@ -62,7 +76,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"ribo-home.top","author":"Ribo","root":"/","typed_text":["Ribo's Blog","Ribo's Research","Ribo's Life"],"theme_version":"2.0.2","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/img/logo.png","icon16":"/img/logo.png","icon32":"/img/logo.png","appleTouchIcon":"/img/logo.png","webmanifest":"/site.webmanifest","visibilitychange":true,"hidden":"/img/logo.png","showText":"欢迎回来！","hideText":"(●—●)快回来啦！"},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"mac","height_limit":500},"creative_commons":{"license":"by-nc-sa","language":"deed.zh"},"notice_outdate":{"enable":true,"style":"flat","limit_day":365,"position":"top"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":false,"isHome":false,"postUpdate":"2024-01-23 23:36:06"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-01-23 23:35:10"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.0.2" id="trm-switch-style">
@@ -230,12 +244,13 @@
             <!-- top bar end -->
 
             <!-- body -->
-            <div class="trm-content-start">
+            
+<div class="trm-content-start">
     <!-- banner -->
     <div class="trm-banner" data-scroll data-scroll-direction="vertical">
     
     <!-- banner cover -->
-    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3" src="https://cdn.ribo-home.top/Obsidian/Pikachu.png">
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" data-scroll data-scroll-direction="vertical" data-scroll-speed="-3" src="https://cdn.ribo-home.top/Obsidian/Cover-primer-design.jpg">
     <!-- banner cover end -->
     
 
@@ -251,10 +266,10 @@
                     <!-- banner title -->
                     <div class="trm-banner-text ">
                         <div class="trm-label trm-mb-20">
-                            Welcome to my website!
+                            NEWS LETTER
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            暗红尘霎时雪亮，<br>热春光一阵冰凉。
+                            使用TBtools从基因组中提取基因序列
                         </h1>
 
                         
@@ -296,7 +311,17 @@
 <div class="trm-main-card-frame trm-sidebar">
     <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="60"> 
     
-        <!-- card header -->
+        <div class="trm-user-tabs" id="sidebar-tabs">
+           <div class="trm-tabs-nav trm-mb-40" id="trm-tabs-nav">
+                <div data-to="tabs-user" class="trm-tabs-nav-item">
+                    <i class="iconfont fas fa-user-alt"></i>
+                </div>
+                <div data-to="tabs-toc" class="trm-tabs-nav-item active">
+                    <i class="iconfont fas fa-th-list"></i>
+                </div>
+           </div>
+            <div name="tabs-user" class="trm-tabs-item">
+                <!-- card header -->
 <div class="trm-mc-header">
     <div class="trm-avatar-frame trm-mb-20">
         <img alt="Avatar" class="trm-avatar" src="https://cdn.ribo-home.top/Obsidian/portrait.jpg">
@@ -314,7 +339,7 @@
     
 </div>
 <!-- card header end -->
-        <!-- sidebar social -->
+                <!-- sidebar social -->
 
 <div class="trm-divider trm-mb-40 trm-mt-40"></div>
 <div class="trm-social">
@@ -330,7 +355,7 @@
 </div>
 
 <!-- sidebar social end -->
-        <!-- info -->
+                <!-- info -->
 <div class="trm-divider trm-mb-40 trm-mt-40"></div>
 <ul class="trm-table trm-mb-20">
     
@@ -355,7 +380,7 @@
 </ul>
 <!-- info end -->
 
-        
+                
     <div class="trm-divider trm-mb-40 trm-mt-40"></div>
     <!-- action button -->
     <div class="text-center">
@@ -366,6 +391,13 @@
     </div>
     <!-- action button end -->
 
+            </div>
+            <div name="tabs-toc" class="trm-tabs-item active">
+                <div class="post-toc">
+    <ol class="toc"><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#使用TBtools从基因组中提取基因序列"  data-scroll-to="#使用TBtools从基因组中提取基因序列"><span class="toc-number">1.</span> <span class="toc-text">使用TBtools从基因组中提取基因序列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#数据准备"  data-scroll-to="#数据准备"><span class="toc-number">1.1.</span> <span class="toc-text">数据准备</span></a></li></ol></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#操作步骤"  data-scroll-to="#操作步骤"><span class="toc-number">2.</span> <span class="toc-text">操作步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#打开TBtools"  data-scroll-to="#打开TBtools"><span class="toc-number">2.1.</span> <span class="toc-text">打开TBtools</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a rel="nofollow" class="toc-link" href="#GXF-Selector工具"  data-scroll-to="#GXF-Selector工具"><span class="toc-number">2.1.1.</span> <span class="toc-text">GXF Selector工具</span></a></li><li class="toc-item toc-level-4"><a rel="nofollow" class="toc-link" href="#手动整理信息"  data-scroll-to="#手动整理信息"><span class="toc-number">2.1.2.</span> <span class="toc-text">手动整理信息</span></a></li><li class="toc-item toc-level-4"><a rel="nofollow" class="toc-link" href="#Fasta-Extract-Recommended-工具"  data-scroll-to="#Fasta-Extract-Recommended-工具"><span class="toc-number">2.1.3.</span> <span class="toc-text">Fasta Extract (Recommended)工具</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#得到结果"  data-scroll-to="#得到结果"><span class="toc-number">3.</span> <span class="toc-text">得到结果</span></a></li></ol>
+</div>
+            </div>
+        </div>
     
     </div>
 </div>
@@ -376,79 +408,99 @@
                 <div class="trm-content" id="trm-content">
                     <div data-scroll data-scroll-repeat data-scroll-offset="500" id="about-triger"></div>
 
-                    <div class="row">
-    <div class="col-lg-12">
-        <div class="trm-card">
-            <div style="padding: 0 20px;">
-                
-                    <ul class="row trm-list" style="margin-bottom: 0px;"><li class="col-lg-4 trm-list-item" style="margin: 6px 0;"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">（3）</span></li><li class="col-lg-4 trm-list-item" style="margin: 6px 0;"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">（6）</span></li></ul>
-                
-            </div>
+                    <div id="post-info" class="row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            01/23
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            13:14
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            Ribo
         </div>
     </div>
 </div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <h2 id="使用TBtools从基因组中提取基因序列"><a href="#使用TBtools从基因组中提取基因序列" class="headerlink" title="使用TBtools从基因组中提取基因序列"></a>使用TBtools从基因组中提取基因序列</h2><h3 id="数据准备"><a href="#数据准备" class="headerlink" title="数据准备"></a>数据准备</h3><p>一份基因组数据，例如TM-1.fa</p>
+<p>一份对应的注释数据，例如TM-1.gff</p>
+<p>一份目标基因ID，例如ID-6.txt</p>
+<p>注：三者的ID一定要对应哈</p>
+<p><img src="https://cdn.ribo-home.top/Obsidian/genome-extract.ID-6.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h2><h3 id="打开TBtools"><a href="#打开TBtools" class="headerlink" title="打开TBtools"></a>打开TBtools</h3><h4 id="GXF-Selector工具"><a href="#GXF-Selector工具" class="headerlink" title="GXF Selector工具"></a>GXF Selector工具</h4><p>从全基因组注释信息中提取与目标基因的相关的注释信息，得到.gff文件</p>
+<p>注：output区域一定要根据文件类型进行具体命名</p>
+<p><img src="https://cdn.ribo-home.top/Obsidian/genome-extract.GXF-Selector.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h4 id="手动整理信息"><a href="#手动整理信息" class="headerlink" title="手动整理信息"></a>手动整理信息</h4><p>用excel分列整理.gff中信息成TBtools的Fasta Extract可识别格式的.txt</p>
+<p><img src="https://cdn.ribo-home.top/Obsidian/genome-extract.ID-6.gff.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><img src="https://cdn.ribo-home.top/Obsidian/genome-extract.ID-6-extract.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h4 id="Fasta-Extract-Recommended-工具"><a href="#Fasta-Extract-Recommended-工具" class="headerlink" title="Fasta Extract (Recommended)工具"></a>Fasta Extract (Recommended)工具</h4><p>将基因组序列文件.fa、可识别格式的.txt可以直接拖入，并将输出文件命名好</p>
+<p><img src="https://cdn.ribo-home.top/Obsidian/genome-extract.Fasta-Extract.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<h2 id="得到结果"><a href="#得到结果" class="headerlink" title="得到结果"></a>得到结果</h2><p>最终得到目标基因的序列，如果觉得fasta序列命名不理想也可以通过Fasta ID Simplify进行简化</p>
+<p><img src="https://cdn.ribo-home.top/Obsidian/genome-extract.ID-6-fa.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><img src="https://cdn.ribo-home.top/Obsidian/genome-extract.sim.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p><img src="https://cdn.ribo-home.top/Obsidian/genome-extract.ID-6-fa-sim.png" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 
-<!-- history -->
+</article>
+    
+    
 
-<div class="row">
+<ul class="trm-post-copyright">
+    <li class="trm-post-copyright-author">
+        <strong>本文作者：</strong>
+        Ribo
+    </li>
+    <li class="trm-post-copyright-link">
+        <strong>本文链接：</strong>
+        <a id="original-link" href="https://ribo-home.top/archives/genome-extract.html" title="使用TBtools从基因组中提取基因序列">https://ribo-home.top/archives/genome-extract.html</a>
+    </li>
+    <li class="trm-post-copyright-license">
+        <strong>版权声明：</strong>
+        本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 ">CC BY-NC-SA 4.0</a> 许可协议。
+    </li>
+</ul>
+
+</div>
+<div id="post-next-prev" class="row">
     <div class="col-lg-12">
         <!-- title -->
         <h5 class="trm-title-with-divider">
-            
-                2023 年的归档
-            
-            <span data-number="01"></span>
+            其他文章
+            <span data-number="02"></span>
         </h5>
     </div>
-    <div class="col-lg-12">
-        <!-- timeline -->
-        <div class="trm-timeline">
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-older-publications-card trm-scroll-animation trm-active-el" data-scroll="" data-scroll-offset="40">
+        <div class="trm-older-publication">
             
-            <div class="trm-timeline-item trm-scroll-animation" data-scroll data-scroll-offset="40">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content less">
-                    
-                        <div class="trm-card-header">
-                            <h6>
-                                <a href="/archives/gene-family-06.html" class="trm-anima-link">
-                                    06-多物种间共线性
-                                </a>
-                            </h6>
-                        </div>
-                    
-                </div>
-            </div>
-            
-            <div class="trm-timeline-item trm-scroll-animation" data-scroll data-scroll-offset="40">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content less">
-                    
-                        <div class="trm-card-header">
-                            <h6>
-                                <a href="/archives/gene-family-01.html" class="trm-anima-link">
-                                    01-文件准备与数据下载
-                                </a>
-                            </h6>
-                        </div>
-                    
-                </div>
-            </div>
-            
+            <a class="trm-op-top trm-anima-link" href="/archives/xiao-xia.html">
+                <span class="trm-op-cover">
+                    <img alt="cover" class="no-fancybox" src="https://cdn.ribo-home.top/Obsidian/xiao-xia-cover(1).png">
+                </span>
+                <h6 class="trm-op-title">来杭旅游攻略·小霞</h6>
+            </a>
+            <div class="trm-divider trm-mb-15 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/01/13</li>
+                <li>13:14</li>
+                <li>随笔</li>
+            </ul>
         </div>
-        <!-- timeline end -->
     </div>
 </div>
+    
+</div>
 
-<!-- history end -->
-
-
-    <div class="trm-pagination">
-        <span class="page-number current">1</span>
-    </div>
-
-
+    
 
 
 
@@ -521,6 +573,10 @@
 
             <div class="trm-fixed-container" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
     
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
+    
     
         <div class="trm-fixed-btn" data-title="单栏和双栏切换" onclick="asyncFun.switchSingleColumn()">
             <i class="iconfont fas fa-arrows-alt-h"></i>
@@ -563,6 +619,10 @@
     
 
     <!-- 评论插件 -->
+    
+        
+
+        
     
 
 
